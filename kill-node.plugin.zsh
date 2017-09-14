@@ -5,5 +5,5 @@ function kill-node {
     NODE_PROCS=`echo $NODE_PROCS | grep $1`
   fi
   echo "Killing every node processes. Not a single child will survive"
-  kill -15 `echo $NODE_PROCS | awk '{print $1}'`
+  kill -15 `echo $NODE_PROCS | awk '{print $1}'` 2> /dev/null
 }
